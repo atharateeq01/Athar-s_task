@@ -1,0 +1,521 @@
+<!doctype html>
+<html long= "en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"> </script>
+    <script src="https://code.jquery.com/jquery-git.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+   
+    <title>Athar Solutions</title>
+</head>
+<body>
+<div class='container'>
+<div class='row' >
+  <div class='col-sm-12' style="height: 30px;"></div>
+  <div class='col-sm-12'>
+    <h4 style="background-color:rgb(197, 47, 172); color:aliceblue; ">Athar Soultions       </h4>
+  </div>
+  <div class='col-sm-12'></div>
+  <div class='col-sm-12'>
+    <h2> DASHBOARD</h2>
+  </div>
+  <div class='col-sm-12' style="border-style: solid; border-top: 0ch;">
+    <h4 style="background-color:rgb(197, 47, 172); color:aliceblue; ">Profit Analysis</h4>
+    <div class='row'>
+        <div class='col-sm-6'>
+            <h3>Profit By Month</h3>
+
+            <!--Line chart of all months -->
+
+            <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+            <script>
+              var xValues =[ ' January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+              var yValues = [Math.floor(Math.random() * 100),
+                   Math.floor(Math.random() * 100),
+                   Math.floor(Math.random() * 100),
+                   Math.floor(Math.random() * 100),
+                   Math.floor(Math.random() * 100),
+                   Math.floor(Math.random() * 100),
+                   Math.floor(Math.random() * 100),
+                   Math.floor(Math.random() * 100),
+                   Math.floor(Math.random() * 100),
+                   Math.floor(Math.random() * 100),
+                   Math.floor(Math.random() * 100),
+                   Math.floor(Math.random() * 100)];
+                  new Chart("myChart", {
+                  type: "line",
+                  data: {
+                    labels: xValues,
+                    datasets: [{
+                      fill: false,
+                      lineTension: 0,
+                      backgroundColor: "rgba(0,0,255,1.0)",
+                      borderColor: "rgba(0,0,255,0.1)",
+                      data: yValues
+                    }]
+                  },
+                  options: {
+                    legend: {display: false},
+                    scales: {
+                      yAxes: [{ticks: {min: 1, max:100}}],
+                    }
+                  }
+                });   
+            </script>
+             
+        </div>
+        <div class='col-sm-6'>
+            <h3>Profit of the Month</h3>
+
+            <!-- Bar chart of each months -->
+
+
+            <form action="#" method ="post" >  
+              <select class="Month">  
+                <option> Select </option>
+                <option> January </option>
+                <option>  February </option>
+                <option> March</option> 
+                <option >April</option>  
+                <option> May</option>  
+                <option> June  </option>  
+                <option> July </option>  
+                <option> August </option>  
+                <option>  September </option>  
+                <option> October</option>   
+                <option> November </option>   
+                <option> December </option>          
+              </select>  
+            </form> 
+            <canvas id="myChart4" style="width:100%;max-width:1000px"></canvas>
+            <script>
+              $(document).ready (function () {  
+              $("select.Month").change (function () {  
+              var month = $(this).children("option:selected").val();  
+              if (month == "January" ||  month == "March" ||  month == "May" ||  month == "July" || month == "August" || month == "October" || month == "December") {
+              var xValues = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];
+              var yValues = [Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100),
+                Math.floor(Math.random() * 100)];
+              } else if (month == "February") {
+                  var xValues = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29];
+                  var yValues = [Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100)];
+                } else if (month == "April" || month == "June" ||  month == "September"|| month == "November"  ){
+                  var xValues = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30];
+                  var yValues = [Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100)];
+                  }
+                  var barColors = [];
+                  
+                  new Chart("myChart4", {
+                    type: "bar",
+                    data: {
+                      labels: xValues,
+                      datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                      }]
+                    },
+                    options: {
+                      legend: {display: false},
+                      title: {
+                        display: true,
+                      }
+                    }
+                  });
+              });  
+          }); 
+        </script>
+       </div>
+      </div>
+  </div>
+<div class='col-sm-12 ' style="height: 20px;"></div>
+<div class='col-sm-12 ' style="border-style: solid; border-top: 0ch;">
+    <h4 style="background-color:rgb(197, 47, 172); color:aliceblue; ">Statistics</h4>
+    <div class='row'  >
+        <div class='col-sm-6'>
+            <h3>This Month</h3>
+              <div  >
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+              <canvas id="oilChart" height="150"></canvas>
+              </div>
+                <script>
+                  new Chart('oilChart', {
+                    type: 'doughnut',
+                    plugins: [{
+                      afterDraw: chart => {
+                        var needleValue = chart.chart.config.data.datasets[0].needleValue;
+                        var dataTotal = chart.chart.config.data.datasets[0].data.reduce((a, b) => a + b, 0);
+                        var angle = Math.PI + (1 / dataTotal * needleValue * Math.PI);
+                        var ctx = chart.chart.ctx;
+                        var cw = chart.chart.canvas.offsetWidth;
+                        var ch = chart.chart.canvas.offsetHeight;
+                        var cx = cw / 2;
+                        var cy = ch - 6;
+
+                        ctx.translate(cx, cy);
+                        ctx.rotate(angle);
+                        ctx.beginPath();
+                        ctx.moveTo(0, -3);
+                        ctx.lineTo(ch - 10, 0);
+                        ctx.lineTo(0, 3);
+                        ctx.fillStyle = 'rgb(0, 0, 0)';
+                        ctx.fill();
+                        ctx.rotate(-angle);
+                        ctx.translate(-cx, -cy);
+                        ctx.beginPath();
+                        ctx.arc(cx, cy, 1, 0, Math.PI * 2);
+                        ctx.fill();
+                      }
+                    }],
+                    data: {
+                      labels: [],
+                      datasets: [{
+                        data: [10,10,10,10,10,10,10,10,10,10 ],
+                        needleValue: Math.random() * 100,
+                        border: 1,
+                        backgroundColor: [
+                        'rgb(255, 77, 77)',
+                        'rgb(255, 77, 77)',
+                        'rgb(255, 77, 77)',
+                        'rgb(255, 77, 77)',
+                        'rgb(255, 77, 77)',
+                        'rgb(255, 77, 77)',
+                        'rgb(255, 77, 77)',
+                        'rgb(255, 77, 77)',
+                        'rgb(255, 77, 77)',
+                        'rgb(255, 77, 77)',
+                        'rgb(255, 77, 77)'
+                        ]
+                      }]
+                    },
+                    options: {
+                      layout: {
+                        padding: {
+                          bottom: 1
+                        }
+                      },
+                      rotation: -Math.PI,
+                      cutoutPercentage: 90,
+                      circumference: Math.PI,
+                      borderWidth:1,
+                      borderRadius: 2,
+                      legend: {
+                        position: 'left'
+                      },
+                      animation: {
+                        animateRotate: false,
+                        animateScale: true
+                      }
+                    }
+                  });
+              </script>
+        </div>
+        <div class='col-sm-6'>
+            <h3>This Week</h3>
+            <canvas id="myChart3" style="width:100%;max-width:600px"></canvas>
+            <script>
+                var xValues = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                var yValues = [Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100),
+                  Math.floor(Math.random() * 100)];
+                  var barColors = [];
+                  new Chart("myChart3", {
+                    type: "bar",
+                    data: {
+                      labels: xValues,
+                      datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                      }]
+                    },
+                    options: {
+                      legend: {display: false},
+                      title: {
+                        display: true,
+                      }
+                    }
+                  });
+                </script>
+        </div>
+    </div>
+</div>
+<div class='col-sm-12 ' style="height: 20px;"></div>
+<div class='col-sm-12 ' style="border-style: solid; border-top: 0ch;">
+    <h4 style="background-color:rgb(197, 47, 172); color:aliceblue; ">Empolyee Information</h4>
+    <div class='row'  >
+        <div class='col-sm-2'></div>
+        <div class='col-sm-8'>
+            <table class="table" id="first">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Location</th>
+                    <th>Years Experince</th>
+                    <th>Expertise</th>
+                    <th>Bill Rates/hr</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="drag t1" id="tr1" >
+                    <td>Ali</td>
+                    <td>Lahore</td>
+                    <td>3 years</td>
+                    <td>Arbitration, Trust, Public law</td>
+                    <td>125</td>
+                  </tr>
+                  <tr class="drag t2" id="tr2">
+                    <td>Ahmad</td>
+                    <td>Lahore</td>
+                    <td>6 years</td>
+                    <td>Private Faulty, Arbitration, Law</td>
+                    <td>125</td>
+                  </tr>
+                  <tr class="drag t3" id="tr3">
+                    <td>Noman</td>
+                    <td>Multan</td>
+                    <td>4 years</td>
+                    <td>Cooperate, Private Faulty, Arbitration</td>
+                    <td>125</td> 
+                  </tr>
+                  <tr class="drag t4" id="tr4">
+                    <td>Umar</td>
+                    <td>Lahore</td>
+                    <td>5 years</td>
+                    <td>Arbitration, Trust, Public law</td>
+                    <td>125</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+        <div class='col-sm-2'></div>
+        <div class="col-sm-12 drophere" style="height: 100px; border: solid;"></div>
+        
+        <script>
+            $('.drag').draggable({
+              axis: "y",
+              helper: "clone"
+            });
+      
+          $('.drophere').droppable({
+
+            drop: function(ev, ui){
+              if(ui.helper.hasClass("t1")){
+         
+                  var currentRow=$("#first") && $("#tr1");
+                  var col1=currentRow.find("td:eq(0)").html();
+                  var col2=currentRow.find("td:eq(1)").html();
+                  var col3=currentRow.find("td:eq(2)").html();
+                  var col4=currentRow.find("td:eq(3)").html();
+                  var col5=currentRow.find("td:eq(4)").html();
+               
+                  $('#here').append('<tr><td>'+col1+'</td><td>'+col2+'</td><td>'+col3+'</td><td>'+col4+
+                      '</td><td><input type="number" class="editValue" name="rate" value = "'+col5+
+                      '"></td><td><input type="number" class="time" name="time " value = "edit"></td><td><p class = "res">'+col5*1+'</p></td></tr>');
+              }
+              if(ui.helper.hasClass("t2")){
+              
+                  var currentRow=$("#first") && $("#tr2");
+                  var col1=currentRow.find("td:eq(0)").html();
+                  var col2=currentRow.find("td:eq(1)").html();
+                  var col3=currentRow.find("td:eq(2)").html();
+                  var col4=currentRow.find("td:eq(3)").html();
+                  var col5=currentRow.find("td:eq(4)").html();
+
+                  $('#here').append('<tr><td>'+col1+'</td><td>'+col2+'</td><td>'+col3+'</td><td>'+col4+
+                    '</td><td><input type="number" class="editValue" name="rate" value = "'+col5+
+                    '"></td><td><input type="number" class="time" name="time " value = "edit"></td><td><p class = "res">'+col5*1+'</p></td></tr>');
+              } 
+              if(ui.helper.hasClass("t3")){
+               
+                  var currentRow=$("#first") && $("#tr3");
+                  var col1=currentRow.find("td:eq(0)").html();
+                  var col2=currentRow.find("td:eq(1)").html();
+                  var col3=currentRow.find("td:eq(2)").html();
+                  var col4=currentRow.find("td:eq(3)").html();
+                  var col5=currentRow.find("td:eq(4)").html();
+
+                  $('#here').append('<tr><td>'+col1+'</td><td>'+col2+'</td><td>'+col3+'</td><td>'+col4+
+                    '</td><td><input type="number" class="editValue" name="rate" value = "'+col5+
+                    '"></td><td><input type="number" class="time" name="time " value = "edit"></td><td><p class = "res">'+col5*1+'</p></td></tr>');
+              } else
+              if(ui.helper.hasClass("t4")){
+
+                var currentRow=$("#first") && $("#tr4");
+                var col1=currentRow.find("td:eq(0)").html();
+                var col2=currentRow.find("td:eq(1)").html();
+                var col3=currentRow.find("td:eq(2)").html();
+                var col4=currentRow.find("td:eq(3)").html();
+                var col5=currentRow.find("td:eq(4)").html();
+
+                $('#here ').append('<tr><td>'+col1+'</td><td>'+col2+'</td><td>'+col3+'</td><td>'+col4+
+                    '</td><td><input type="number" class="editValue" name="rate" value = "'+col5+
+                    '"></td><td><input type="number" class="time" name="time " value = "edit"></td><td><p class = "res">'+col5*1+'</p></td></tr>');
+              } 
+            }
+
+            
+          }); 
+         
+         
+         
+         
+            
+         </script>
+    </div></div>
+    <div class='row'>
+        <div class='col-sm-12' style="height: 30px;"></div>
+
+    </div>
+
+<div class='col-sm-12 ' style="border-style: solid; border-top: 0ch;">
+    <h4 style="background-color:rgb(197, 47, 172); color:aliceblue; ">Selected Empolyee Information</h4>
+    <div class='row'  >
+        <div class='col-sm-1'></div>
+        <div class='col-sm-11'>
+            <table class="table" id="here">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Location</th>
+                    <th>Years Experince</th>
+                    <th>Expertise</th>
+                    <th>Bill Rates/hr</th>
+                    <th>Time</th>
+                    <th>Bill out</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+
+              <table class="table">
+                <tbody>
+                  
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>Total</td>
+                  <td id = "sum"></td>
+                </tbody>
+              </table>
+
+              <script >
+                $( document ).ready( function() {
+                  var sum9 = 0;
+                  $("#here tbody tr").each( function( index ) {
+                    sum_population += $( this ).currentRow.find("td:eq(4)").html() * 1;
+                  });
+              
+                  $( "td#sum" ).text( sum9);
+                });
+              </script>
+
+
+        </div>
+        </div></div>
+    <div class='row'>
+        <div class='col-sm-12' style="height: 100px;"></div>
+
+    </div>
+</div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
